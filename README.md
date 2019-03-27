@@ -100,7 +100,7 @@ IoTデバイスに書き込むファームウェアを作成するためのプ�
 
 URL に次の URL を入力してください。 *Program Name* は URL から自動的に生成されます。URL を入力したら *Add Program* ボタンをクリックしてインポートを開始します。
 
-https://os.mbed.com/users/coisme/code/Pelion-workshop-Grove-sensors/
+https://github.com/coisme/Pelion-workshop-Grove-sensors
 
 インポートが完了するとワークスペースに *Pelion-workshop-Grove-sensors* ができています。
 
