@@ -1,3 +1,7 @@
+本資料の最新版は以下の URL にて公開されています。
+
+https://github.com/coisme/Pelion-workshop-K64F-Grove
+
 本ワークショップでは [FRDM-K64F](https://os.mbed.com/platforms/frdm-k64f/) ボードと [Grove Starter KIT](https://www.switch-science.com/catalog/1812/?gclid=Cj0KCQjwjpjkBRDRARIsAKv-0O0KkL9qYiB7b3nF_ZOtFd_hxtPU6r6UJqFDzpDz0RgtCklCq6Bu_vMaAuZsEALw_wcB) を用いて IoT デバイスを作成します。次のことを体験できます。
 
 1. Mbed Studio で IoT デバイスのファームウェアを作成する
@@ -64,6 +68,19 @@ API キーの作成が完了すると表示されます。この API キーは�
 
 # ハードウェアのセットアップ
 
+## SD カード
+
+本ワークショップではマイクロ SD カードを使用します。K64F にはマイクロ SD カード用のスロットがありますので、そちらにマイクロ SD カードを差し込んでください。
+
+|<img src="img/hw_setup_sdcard.jpg" width="400" />|
+|:-:|
+
+## イーサネットケーブル
+
+ネットワークに接続されたイーサネットケーブルを K64F のイーサネットコネクタに接続します。
+
+## Grove Starter Kit
+
 Grove Starter Kit を次の設定でセットアップします。
 
 ||モジュール|シールドコネクタ|
@@ -73,10 +90,11 @@ Grove Starter Kit を次の設定でセットアップします。
 |プッシュボタン|<img src="img/push_button.jpg" width="150" />| D2 |
 |ブザー|<img src="img/buzzer.jpg" width="150" />| D3 |
 
-Grove のシールドを FRDM-K64F と組み合わせると次の写真のようになります（写真はイーサネットケーブルも接続しています）。
+FRDM-K64F に SD カード、イーサネットケーブル、 Grove Starter Kit を組み合わせると次の写真のようになります。
 
 |<img src="img/hw_setup.jpg" width="600" />|
 |:-:|
+
 
 # ファームウェアを作成する
 
@@ -239,7 +257,14 @@ https://portal.mbedcloud.com/
 
 ログインが完了すると Usage Dashboard が表示されます。画面左のメニューの `Device Directory` をクリックするとデバイス一覧が表示されます。今回は先ほど接続した一台が表示されるはずです。
 
-<img src="img/device_directory.png" width="800" />
+|<img src="img/device_directory.png" width="800" />|
+|:-:|
+
+もし表示言語が日本語になっている場合は、本手順書の図と見かけが異なる場合があります。そのときは左下にある「言語」設定で英語に切り替えてご使用ください。
+
+|<img src="img/change_lang.png" width="600" />|
+|:-:|
+
 
 リストに表示されているデバイス名をクリックするとデバイスの詳細画面が表示されます。デバイス詳細の表示の中にある *RESOURCES* タブをクリックしてください。
 
@@ -247,12 +272,13 @@ https://portal.mbedcloud.com/
 
 IoT デバイスに登録されているリソース一覧が表示されます。この中から `button_count` ( `/3200/0/5501` ) というリソースを探し、クリックしてください。このリソースは IoT デバイス上のボタンプッシュボタンに対応します。現時点では FRDM-K64F 上の `SW2` ボタンのみが割り当てられています。
 
-<img src="img/resource_list.png" width="800" />
+|<img src="img/resource_list.png" width="800" />|
+|:-:|
 
 クリックすると、モニタ画面が表示され、リソースの状態をモニタすることができます。 `SW2` ボタンを押すたびに、 `Value` の値が増え、グラフが更新される様子が見られます。
 
-<img src="img/monitor_resource.png" width="600" />
-
+|<img src="img/monitor_resource.png" width="600" />|
+|:-:|
 
 # Grove Starter Kit を追加する
 
