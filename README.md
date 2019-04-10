@@ -148,7 +148,11 @@ https://github.com/coisme/Pelion-workshop-Grove-sensors
 
 ## API キーを設定する
 
-Mbed Studio に Pelion Device Management と連携するため API キーを設定します。ウィンドゥ左に並んだアイコンの中から、雲マークのものをクリックしてください。Pelion Device Management の画面になります。API キーを入力するためのボックス *Pelion API Key* がありますので、事前準備で手元に保管した API キーをこちらに入力して *OK* ボタンをクリックしてください。
+Mbed Studio に Pelion Device Management と連携するため API キーを設定します。ウィンドゥ左に並んだアイコンの中から、雲マーク(*)のものをクリックしてください。
+
+(*)雲マークが見つからない場合は、ウィンドウ上部のメニューから `View` --> `Pelion Device Management` を選択してください。これによりアイコンが表示されるようになります。
+
+Pelion Device Management の画面になります。API キーを入力するためのボックス *Pelion API Key* がありますので、事前準備で手元に保管した API キーをこちらに入力して *OK* ボタンをクリックしてください。
 
 |<img src="img/SaveAPIkey.png" width="600" />|
 |:-:|
