@@ -131,7 +131,30 @@ https://github.com/coisme/Pelion-workshop-Grove-sensors
 
 ワークスペースにあるプロジェクト *Pelion-workshop-Grove-sensors* を右クリックして ``Download Source for Libraries`` を選択します。ライブラリがインポートされます。
 
-続いて、インポートされた各ライブラリのリビジョン（タグ）を変更します。フォルダ名を右クリックして ``Update Library to Version`` を選択してください。タグを選択するダイアログが出てきますので、次のテーブルで指定しているタグに変更して下さい。これが正しく設定されていないと、コンパイル時にエラーが出る場合があります。
+続いて、プロジェクトのフォルダ C:\Users\Owner\Mbed Programs\Pelion-workshop-Grove-sensors をエクスプローラから開いてください。revisions.bat というファイルがありますので、ダブルクリックして実行します。インポートされたライブラリのリビジョンが正しいものに設定されます。
+
+以下はコマンドプロンプトへの出力例です。
+
+```
+C:\Users\Owner\Mbed Programs\Pelion-workshop-Grove-sensors>mbed deploy
+[mbed] Working path "C:\Users\Owner\Mbed Programs\Pelion-workshop-Grove-sensors" (program)
+[mbed] Adding library "mbed-os" from "https://github.com/ARMmbed/mbed-os" at rev #610e35ddc6d5
+[mbed] Updating library "simple-mbed-cloud-client" to rev #a885642da37e (tag: v1.4.1)
+[mbed] Removing library "simple-mbed-cloud-client\mbed-cloud-client" (changed URL). Will add from new URL.
+[mbed] Adding library "simple-mbed-cloud-client\mbed-cloud-client" from "https://github.com/ARMmbed/mbed-cloud-client" at rev #9b0bc6a2f3f1
+
+C:\Users\Owner\Mbed Programs\Pelion-workshop-Grove-sensors>mbed ls
+[mbed] Working path "C:\Users\Owner\Mbed Programs\Pelion-workshop-Grove-sensors" (program)
+Pelion-workshop-Grove-sensors (#8232a2ef641f)
+|- mbed-os (#610e35ddc6d5, tags: mbed-os-5.10.0, mbed-os-5.10.0-rc3)
+`- simple-mbed-cloud-client (#a885642da37e, tag: v1.4.1)
+   `- mbed-cloud-client (#9b0bc6a2f3f1, tag: 1.4.0)
+
+C:\Users\osakoi01\Mbed Programs\Pelion-workshop-Grove-sensors-2>pause
+Press any key to continue . . .
+```
+
+次のように設定されていれば大丈夫です。
 
 |フォルダ名|タグ|
 |:--|:--|
